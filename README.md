@@ -1,3 +1,52 @@
+# HTML5 Game Dev: 2D Platform Fundamentals Tutorial
+
+## Tools
+Phaser.io
+NVM
+VsCode
+`git clone https://github.com/jedhastwell/phaser3-es6-webpack-boilerplate.git`
+Optional: Texture Packer
+
+
+## Install Dependencies
+`npm ci`
+
+## Run Server
+`npm run start`
+
+## Phaser Library Documents
+This version:
+
+https://photonstorm.github.io/phaser3-docs/
+
+## Assets Sources
+https://itch.io
+https://opengameart.org
+This one:
+https://finalbossblues.itch.io/pixel-platformer-pack
+
+### Notes on Sprites
+Texture Atlas - combines all textures and has a key file to translate positions
+(json file)
+
+### Loading Sprite Sheet
+Game.js
+Preload funcion:
+`this.load.spritesheet('hero-run-sheet', 'assets/hero/run.png', { frameWidth: 32, frameHeight: 64, });`
+
+create function:
+``
+
+
+
+
+
+
+
+
+
+
+
 # Phaser 3 + ES6 + Webpack Boilerplate
 A boilerplate project for creating games with Phaser3, ES6 and Webpack.
 
