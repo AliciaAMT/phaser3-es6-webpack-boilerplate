@@ -31,11 +31,36 @@ Texture Atlas - combines all textures and has a key file to translate positions
 
 ### Loading Sprite Sheet
 Game.js
-Preload funcion:
+#### Preload funcion:
 `this.load.spritesheet('hero-run-sheet', 'assets/hero/run.png', { frameWidth: 32, frameHeight: 64, });`
 
-create function:
-``
+#### create function:
+`this.add.sprite(400,300, 'hero-run-sheet', 5);`
+
+### Load Animation
+(create function)
+`this.anims.create({ key: 'hero-running', frames: this.anims.generateFrameNumbers('hero-run-sheet'), frameRate: 10, repeat: -1, });`
+
+### Add Physics
+(config.js)
+`,
+  physics: {
+    default: 'arcade',
+    arcade: {
+      gravity: {y: 750},
+    },    
+  }`
+
+(create in game.js)
+Add physics engine to this line:
+`this.player = this.physics.add.sprite(400, 300, 'hero-run-sheet');`
+
+#### Prevent Player From Falling Out of Bounds
+(create game.js)
+` this.player.body.setCollideWorldBounds(true);`
+
+
+
 
 
 

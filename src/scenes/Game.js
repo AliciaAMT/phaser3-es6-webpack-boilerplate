@@ -16,9 +16,17 @@ class Game extends Phaser.Scene {
   }
 
   create(data) {
-    this.anims.create();
+    this.anims.create({
+      key: 'hero-running',
+      frames: this.anims.generateFrameNumbers('hero-run-sheet'),
+      frameRate: 10,
+      repeat: -1,
+    });
     // this.add.image(400, 300, 'logo');
-    this.add.sprite(400, 300, 'hero-run-sheet', 5);
+    this.player = this.physics.add.sprite(400, 300, 'hero-run-sheet');
+    this.player.anims.play('hero-running');
+    // do not allow player to fall out of bounds
+    this.player.body.setCollideWorldBounds(true);
   }
 
   update(time, delta) {}
