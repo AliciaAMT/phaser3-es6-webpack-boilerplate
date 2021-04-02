@@ -59,7 +59,20 @@ Add physics engine to this line:
 (create game.js)
 ` this.player.body.setCollideWorldBounds(true);`
 
+#### Debugging
+`debug: true,
+      debugShowVelocity: true,
+      debugShowBody: true,
+      debugShowStaticBody: true,`
 
+#### Fix Collision Body
+(size and offset)
+
+### Refactor Hero Data to Entities
+
+## Class 14 - Capturing Keyboard Input
+
+### 
 
 
 

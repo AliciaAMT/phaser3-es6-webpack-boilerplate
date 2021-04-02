@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import Hero from '../entities/hero';
 
 class Game extends Phaser.Scene {
   constructor() {
@@ -16,20 +17,23 @@ class Game extends Phaser.Scene {
   }
 
   create(data) {
+
+    // keyboard controls
+    this.cursorKeys = this.input.keyboard.createCursorKeys();
+    
     this.anims.create({
       key: 'hero-running',
       frames: this.anims.generateFrameNumbers('hero-run-sheet'),
       frameRate: 10,
       repeat: -1,
     });
-    // this.add.image(400, 300, 'logo');
-    this.player = this.physics.add.sprite(400, 300, 'hero-run-sheet');
-    this.player.anims.play('hero-running');
-    // do not allow player to fall out of bounds
-    this.player.body.setCollideWorldBounds(true);
+    this.hero = new Hero(this, 250, 160);
+   
   }
 
-  update(time, delta) {}
+  update(time, delta) {
+    
+  }
 }
 
 export default Game;
