@@ -72,7 +72,10 @@ Add physics engine to this line:
 
 ## Class 14 - Capturing Keyboard Input
 
-### 
+### Install State Machine Library
+`npm install javascript-state-machine --save`
+
+
 
 
 
